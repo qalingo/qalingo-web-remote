@@ -17,6 +17,7 @@
 
 	<modules>
 		<module>qalingo-webapp-remote-rest</module>
+		<module>qalingo-webapp-remote-ws</module>
 	</modules>
 
 	<properties>

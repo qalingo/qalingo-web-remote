@@ -6,10 +6,10 @@
 		<artifactId>qalingo-webapp-remotes</artifactId>
 		<version>0.7.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>qalingo-webapp-remote-rest</artifactId>
+	<artifactId>qalingo-webapp-remote-ws</artifactId>
 	<packaging>war</packaging>
-	<name>{Q} Commerce Solution Remote Rest webapp</name>
-	<description>{Q} Commerce Solution Remote Rest webapp</description>
+	<name>{Q} Commerce Solution Remote WS webapp</name>
+	<description>{Q} Commerce Solution Remote WS webapp</description>
 	<url>http://www.hoteia.com</url>
 	<organization>
 		<name>Hoteia</name>
@@ -21,11 +21,11 @@
 		<deploy.server.id>tomcatQalingo</deploy.server.id>
 		<deploy.server.ip>localhost</deploy.server.ip>
 		<deploy.webapp.port>20080</deploy.webapp.port>
-		<deploy.webapp.path>/remote-rest</deploy.webapp.path>
+		<deploy.webapp.path>/remote-ws</deploy.webapp.path>
 	</properties>
 	
 	<build>
-		<finalName>remote-rest</finalName>
+		<finalName>remote-ws</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -52,7 +52,11 @@
 		</dependency>
 		<dependency>
 			<groupId>fr.hoteia.qalingo</groupId>
-			<artifactId>qalingo-api-web-remote-rest</artifactId>
+			<artifactId>qalingo-api-core-ws</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>fr.hoteia.qalingo</groupId>
+			<artifactId>qalingo-api-web-remote-ws</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>fr.hoteia.qalingo</groupId>
