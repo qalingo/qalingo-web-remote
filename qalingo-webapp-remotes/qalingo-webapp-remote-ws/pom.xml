@@ -52,7 +52,7 @@
 		</dependency>
 		<dependency>
 			<groupId>fr.hoteia.qalingo</groupId>
-			<artifactId>qalingo-api-core-ws</artifactId>
+			<artifactId>qalingo-api-core-jax-ws</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>fr.hoteia.qalingo</groupId>

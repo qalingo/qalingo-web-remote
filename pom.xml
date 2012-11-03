@@ -26,14 +26,13 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<solr.server.url>http://localhost:14080/solr</solr.server.url>
 		<env.name>developpement</env.name>
-
+		<qalingo.webservice.url>http://localhost:21080/remote-ws</qalingo.webservice.url>
+				
 		<!-- Spring -->
 		<spring.version>3.1.2.RELEASE</spring.version>
 		<aspectj.version>1.7.0</aspectj.version>
 		<!-- Spring-security -->
 		<spring-security.version>3.1.2.RELEASE</spring-security.version>
-		<!-- Spring-ws -->
-		<spring-ws.version>2.1.0.RELEASE</spring-ws.version>
 		<!-- Spring-batch -->
 		<spring.batch.version>2.1.9.RELEASE</spring.batch.version>
 		<spring.batch.admin.version>1.2.1.RELEASE</spring.batch.admin.version>
@@ -101,7 +100,7 @@
 			</dependency>
 			<dependency>
 				<groupId>fr.hoteia.qalingo</groupId>
-				<artifactId>qalingo-api-core-ws</artifactId>
+				<artifactId>qalingo-api-core-jax-ws</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
@@ -345,7 +344,7 @@
 				<version>2.1</version>
 			</dependency>
 		
-			<!-- Logs dependencies -->
+			<!-- Cache dependencies -->
 			<dependency>
 				<groupId>net.sf.ehcache</groupId>
 				<artifactId>ehcache-core</artifactId>
@@ -402,6 +401,13 @@
 				<artifactId>mail</artifactId>
 				<version>1.4.5</version>
 			</dependency>
+			
+			<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-servlet-api</artifactId>
+				<version>7.0.22</version>
+				<scope>provided</scope>
+			</dependency>
             
 			<!-- Test dependencies -->
 			<dependency>
@@ -432,12 +438,6 @@
 				<groupId>org.jdom</groupId>
 				<artifactId>jdom</artifactId>
 				<version>1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.tomcat</groupId>
-				<artifactId>tomcat-servlet-api</artifactId>
-				<version>7.0.22</version>
-				<scope>provided</scope>
 			</dependency>
 			<!-- Support for testing Spring applications with tools such as JUnit and TestNG This artifact is generally always defined with 
 				a 'test' scope for the integration testing framework and unit testing stubs -->
