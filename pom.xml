@@ -15,9 +15,9 @@
 	</organization>
 
 	<scm>
-		<connection>scm:git:git@github.com:hoteia/qalingo-b2c-web-remote.git</connection>
-		<developerConnection>scm:git:git@github.com:hoteia/qalingo-b2c-web-remote.git</developerConnection>
-		<url>scm:git:git@github.com:hoteia/qalingo-b2c-web-remote.git</url>
+		<connection>scm:git:git@github.com:qalingo/qalingo-b2c-web-remote.git</connection>
+		<developerConnection>scm:git:git@github.com:qalingo/qalingo-b2c-web-remote.git</developerConnection>
+		<url>scm:git:git@github.com:qalingo/qalingo-b2c-web-remote.git</url>
 	</scm>
 	
 	<properties>
