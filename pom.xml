@@ -18,8 +18,8 @@
 		<connection>scm:git:git@github.com:qalingo/qalingo-b2c-web-remote.git</connection>
 		<developerConnection>scm:git:git@github.com:qalingo/qalingo-b2c-web-remote.git</developerConnection>
 		<url>scm:git:git@github.com:qalingo/qalingo-b2c-web-remote.git</url>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 	
 	<properties>
 		<root.basedir>${project.basedir}</root.basedir>
@@ -55,41 +55,24 @@
 	<modules>
 		<module>qalingo-webapp-remotes</module>
 	</modules>
-
-	<profiles>
-		<profile>
-			<id>demo</id>
-			<properties>
-				<project.www.theme>default</project.www.theme>
-				<spring.security.context.relative>true</spring.security.context.relative>
-				<env.name>demo</env.name>
-
-				<wurfl.xml.path>file:///home/servers/qalingo/misc/wurfl/wurfl.zip</wurfl.xml.path>
-			</properties>
-		</profile>
-		<profile>
-			<id>dev</id>
-			<properties>
-				<project.www.theme>default</project.www.theme>
-				<spring.security.context.relative>true</spring.security.context.relative>
-				<packaging.excludes />
-
-				<jdbc.username>qalingo</jdbc.username>
-				<jdbc.password>password</jdbc.password>
-				<jdbc.url>jdbc:mysql://localhost:3306/qalingo?AutoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8</jdbc.url>
-
-				<batch.jdbc.username>qalingo</batch.jdbc.username>
-				<batch.jdbc.password>password</batch.jdbc.password>
-				<batch.jdbc.url>jdbc:mysql://localhost:3306/qalingo?AutoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8</batch.jdbc.url>
-				
-				<wurfl.xml.path>file:///C:/dev/hoteia/qalingo/workspace/misc/wurfl/wurfl.zip</wurfl.xml.path>
-			</properties>
-		</profile>
-	</profiles>
 	
 	<dependencyManagement>
 		<dependencies>
 			<!-- Qalingo libs -->
+			<dependency>
+				<groupId>fr.hoteia.qalingo</groupId>
+				<artifactId>qalingo-common-shared-configuration</artifactId>
+				<version>${qalingo.engine.version}</version>
+				<classifier>resources</classifier>
+				<type>zip</type>
+			</dependency>
+			<dependency>
+				<groupId>fr.hoteia.qalingo</groupId>
+				<artifactId>qalingo-frontoffice-shared-configuration</artifactId>
+				<version>${qalingo.engine.version}</version>
+				<classifier>resources</classifier>
+				<type>zip</type>
+			</dependency>
 			<dependency>
 				<groupId>fr.hoteia.qalingo</groupId>
 				<artifactId>qalingo-api-core-common</artifactId>
@@ -548,6 +531,25 @@
 					</execution>
 				</executions>
 			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+					<execution>
+						<id>unpack-shared-resources</id>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+						<phase>generate-resources</phase>
+						<configuration>
+							<outputDirectory>${project.build.directory}/generated-resources</outputDirectory>
+							<includeArtifactIds>qalingo-common-shared-configuration,qalingo-frontoffice-shared-configuration</includeArtifactIds>
+							<includeGroupIds>${project.groupId}</includeGroupIds>
+							<excludeTransitive>true</excludeTransitive>
+						</configuration>
+					</execution>
+				</executions>
+            </plugin>
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<configuration>
