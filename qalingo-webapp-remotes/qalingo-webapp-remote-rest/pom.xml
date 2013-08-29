@@ -20,7 +20,7 @@
 		<root.basedir>${project.parent.parent.basedir}</root.basedir> 
 		<deploy.server.id>tomcatQalingo</deploy.server.id>
 		<deploy.server.ip>localhost</deploy.server.ip>
-		<deploy.webapp.port>20080</deploy.webapp.port>
+		<deploy.webapp.port>22080</deploy.webapp.port>
 		<deploy.webapp.path>/remote-rest</deploy.webapp.path>
 	</properties>
 	
