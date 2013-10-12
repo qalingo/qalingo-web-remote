@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>fr.hoteia.qalingo</groupId>
@@ -20,7 +21,7 @@
 		<url>scm:git:git@github.com:qalingo/qalingo-b2c-web-remote.git</url>
 		<tag>HEAD</tag>
 	</scm>
-	
+
 	<properties>
 		<root.basedir>${project.basedir}</root.basedir>
 		<qalingo.engine.version>0.7.1-SNAPSHOT</qalingo.engine.version>
@@ -29,7 +30,7 @@
 		<solr.server.url>http://localhost:14080/solr</solr.server.url>
 		<env.name>developpement</env.name>
 		<qalingo.webservice.url>http://localhost:21080/remote-ws</qalingo.webservice.url>
-				
+
 		<!-- Spring -->
 		<spring.version>3.1.2.RELEASE</spring.version>
 		<aspectj.version>1.7.0</aspectj.version>
@@ -47,7 +48,7 @@
 		<!-- DROOLS -->
 		<drools.version>5.4.0.Final</drools.version>
 		<!-- LOGS -->
-		<logback.version>1.0.6</logback.version>	
+		<logback.version>1.0.6</logback.version>
 		<slf4j.version>1.6.6</slf4j.version>
 		<jackson-version>1.8.0</jackson-version>
 	</properties>
@@ -55,7 +56,7 @@
 	<modules>
 		<module>qalingo-webapp-remotes</module>
 	</modules>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<!-- Qalingo libs -->
@@ -109,7 +110,7 @@
 				<artifactId>qalingo-api-web-remote-ws</artifactId>
 				<version>${qalingo.engine.version}</version>
 			</dependency>
-			
+
 			<!-- Commons libs -->
 			<dependency>
 				<groupId>commons-logging</groupId>
@@ -165,8 +166,8 @@
 				<artifactId>spring-context-support</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
-			<!-- Object-to-XML Mapping (OXM) abstraction and integration with JAXB, JiBX, Castor, XStream, and XML Beans. (depends on core, 
-				beans, context) Define this if you need OXM (org.springframework.oxm.*) -->
+			<!-- Object-to-XML Mapping (OXM) abstraction and integration with JAXB, JiBX, Castor, XStream, and XML Beans. (depends 
+				on core, beans, context) Define this if you need OXM (org.springframework.oxm.*) -->
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-oxm</artifactId>
@@ -182,9 +183,9 @@
 				<artifactId>spring-aop</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
-			<dependency> 
-				<groupId>org.springframework</groupId> 
-				<artifactId>spring-aspects</artifactId> 
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aspects</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
 			<dependency>
@@ -222,8 +223,8 @@
 				<artifactId>spring-support</artifactId>
 				<version>2.0.8</version>
 			</dependency>
-			            		
-			<!-- AspectJ framework -->	
+
+			<!-- AspectJ framework -->
 			<dependency>
 				<groupId>org.aspectj</groupId>
 				<artifactId>aspectjrt</artifactId>
@@ -234,7 +235,7 @@
 				<artifactId>aspectjweaver</artifactId>
 				<version>${aspectj.version}</version>
 			</dependency>
-		
+
 			<!-- Hibernate framework -->
 			<dependency>
 				<groupId>org.hibernate</groupId>
@@ -267,7 +268,7 @@
 				<artifactId>antlr</artifactId>
 				<version>2.7.7</version>
 			</dependency>
-		           
+
 			<!-- CXF framework -->
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
@@ -316,7 +317,7 @@
 				<artifactId>jackson-jaxrs</artifactId>
 				<version>${jackson-version}</version>
 			</dependency>
-			
+
 			<!-- JaxB libs -->
 			<dependency>
 				<groupId>com.sun.xml.bind</groupId>
@@ -328,7 +329,7 @@
 				<artifactId>jaxb-api</artifactId>
 				<version>2.1</version>
 			</dependency>
-		
+
 			<!-- Cache dependencies -->
 			<dependency>
 				<groupId>net.sf.ehcache</groupId>
@@ -347,7 +348,7 @@
 				<artifactId>mysql-connector-java</artifactId>
 				<version>5.1.9</version>
 			</dependency>
-		
+
 			<!-- Logs dependencies -->
 			<dependency>
 				<groupId>ch.qos.logback</groupId>
@@ -374,7 +375,7 @@
 				<artifactId>log4j-over-slf4j</artifactId>
 				<version>${slf4j.version}</version>
 			</dependency>
-		
+
 			<!-- UI Velocity framework -->
 			<dependency>
 				<groupId>org.apache.velocity</groupId>
@@ -386,20 +387,20 @@
 				<artifactId>velocity-tools</artifactId>
 				<version>2.0</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>javax.mail</groupId>
 				<artifactId>mail</artifactId>
 				<version>1.4.5</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>org.apache.tomcat</groupId>
 				<artifactId>tomcat-servlet-api</artifactId>
 				<version>7.0.22</version>
 				<scope>provided</scope>
 			</dependency>
-            
+
 			<!-- Test dependencies -->
 			<dependency>
 				<groupId>junit</groupId>
@@ -430,8 +431,8 @@
 				<artifactId>jdom</artifactId>
 				<version>1.1</version>
 			</dependency>
-			<!-- Support for testing Spring applications with tools such as JUnit and TestNG This artifact is generally always defined with 
-				a 'test' scope for the integration testing framework and unit testing stubs -->
+			<!-- Support for testing Spring applications with tools such as JUnit and TestNG This artifact is generally always defined 
+				with a 'test' scope for the integration testing framework and unit testing stubs -->
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-test</artifactId>
@@ -444,7 +445,7 @@
 				<version>${cxf.version}</version>
 				<scope>test</scope>
 			</dependency>
-			
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -480,13 +481,12 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.0</version>
 				<configuration>
 					<server>${deploy.server.id}</server>
 					<url>http://${deploy.server.ip}:${deploy.webapp.port}/manager/text</url>
@@ -507,7 +507,7 @@
 						<include>src/**</include>
 						<include>**/test/**</include>
 					</includes>
-					<excludes> 
+					<excludes>
 						<exclude>target/**</exclude>
 						<exclude>.clover/**</exclude>
 						<exclude>**/library/**</exclude>
@@ -537,10 +537,10 @@
 					</execution>
 				</executions>
 			</plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
 					<execution>
 						<id>unpack-shared-resources</id>
 						<goals>
@@ -555,7 +555,7 @@
 						</configuration>
 					</execution>
 				</executions>
-            </plugin>
+			</plugin>
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<configuration>
@@ -573,13 +573,13 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<extensions> 
-			<extension> 
-				<groupId>org.apache.maven.wagon</groupId> 
-				<artifactId>wagon-ftp</artifactId> 
-				<version>2.2</version> 
-			</extension> 
-		</extensions> 
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ftp</artifactId>
+				<version>2.2</version>
+			</extension>
+		</extensions>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -628,7 +628,7 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	
+
 	<distributionManagement>
 		<repository>
 			<id>releases</id>
@@ -642,5 +642,5 @@
 			<uniqueVersion>false</uniqueVersion>
 		</snapshotRepository>
 	</distributionManagement>
-	
+
 </project>
