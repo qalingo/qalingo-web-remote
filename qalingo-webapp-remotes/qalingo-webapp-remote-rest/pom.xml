@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>fr.hoteia.qalingo</groupId>
@@ -15,51 +16,51 @@
 		<name>Hoteia</name>
 		<url>http://www.hoteia.com</url>
 	</organization>
-	
-	<properties>	
-		<root.basedir>${project.parent.parent.basedir}</root.basedir> 
+
+	<properties>
+		<root.basedir>${project.parent.parent.basedir}</root.basedir>
 		<deploy.server.id>tomcatQalingo</deploy.server.id>
 		<deploy.server.ip>localhost</deploy.server.ip>
 		<deploy.webapp.port>22080</deploy.webapp.port>
 		<deploy.webapp.path>/remote-rest</deploy.webapp.path>
 	</properties>
-	
+
 	<build>
 		<finalName>remote-rest</finalName>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
 				<includes>
 					<include>**/*.*</include>
 				</includes>
-                <filtering>false</filtering>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
+				<filtering>false</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
 				<includes>
 					<include>**/*.properties</include>
 				</includes>
-                <filtering>true</filtering>
-            </resource>
+				<filtering>true</filtering>
+			</resource>
 			<resource>
 				<directory>${project.build.directory}/generated-resources</directory>
 				<includes>
 					<include>**/*.*</include>
 				</includes>
-                <filtering>false</filtering>
+				<filtering>false</filtering>
 			</resource>
 			<resource>
 				<directory>${project.build.directory}/generated-resources</directory>
 				<includes>
 					<include>**/*.properties</include>
 				</includes>
-                <filtering>true</filtering>
+				<filtering>true</filtering>
 			</resource>
-        </resources>
+		</resources>
 	</build>
-	
+
 	<dependencies>
-		<!-- Qalingo libs-->
+		<!-- Qalingo libs -->
 		<dependency>
 			<groupId>fr.hoteia.qalingo</groupId>
 			<artifactId>qalingo-common-shared-configuration</artifactId>
@@ -84,12 +85,8 @@
 			<groupId>fr.hoteia.qalingo</groupId>
 			<artifactId>qalingo-api-web-remote-rest</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>fr.hoteia.qalingo</groupId>
-			<artifactId>qalingo-i18n-properties</artifactId>
-		</dependency>
-		
-		<!-- Commons libs-->
+
+		<!-- Commons libs -->
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
@@ -114,7 +111,7 @@
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 		</dependency>
-		
+
 		<!-- Spring dependencies -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -132,9 +129,9 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
 		</dependency>
-		<dependency>  
-			<groupId>org.springframework</groupId>  
-			<artifactId>spring-aspects</artifactId>  
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -166,7 +163,7 @@
 			<artifactId>spring-context</artifactId>
 		</dependency>
 
-		<!-- AspectJ framework -->	
+		<!-- AspectJ framework -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
@@ -175,7 +172,7 @@
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
 		</dependency>
-		
+
 		<!-- Hibernate framework -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -212,13 +209,13 @@
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
 		</dependency>
-		
+
 		<!-- Cache dependencies -->
 		<dependency>
 			<groupId>net.sf.ehcache</groupId>
 			<artifactId>ehcache-web</artifactId>
 		</dependency>
-		
+
 		<!-- UI Velocity framework -->
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
@@ -228,16 +225,9 @@
 			<groupId>org.apache.velocity</groupId>
 			<artifactId>velocity-tools</artifactId>
 		</dependency>
-		
-		<!-- These dependencies are here just for enabling logging -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-servlet-api</artifactId>
 		</dependency>
-
 	</dependencies>
 </project>
