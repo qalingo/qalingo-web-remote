@@ -32,24 +32,21 @@
 		<qalingo.webservice.url>http://localhost:21080/remote-ws</qalingo.webservice.url>
 
 		<!-- Spring -->
-		<spring.version>3.1.2.RELEASE</spring.version>
+		<spring.version>3.2.4.RELEASE</spring.version>
 		<aspectj.version>1.7.0</aspectj.version>
 		<!-- Spring-security -->
-		<spring-security.version>3.1.2.RELEASE</spring-security.version>
+		<spring-security.version>3.1.4.RELEASE</spring-security.version>
 		<!-- Spring-batch -->
 		<spring.batch.version>2.1.9.RELEASE</spring.batch.version>
 		<spring.batch.admin.version>1.2.1.RELEASE</spring.batch.admin.version>
 		<!-- Datas -->
-		<hibernate.version>4.1.7.Final</hibernate.version>
+		<hibernate.version>4.2.6.Final</hibernate.version>
 		<!-- CXF -->
 		<cxf.version>2.7.0</cxf.version>
 		<!-- SOLR -->
-		<solr.version>4.0.0-BETA</solr.version>
+		<solr.version>4.0.0</solr.version>
 		<!-- DROOLS -->
 		<drools.version>5.4.0.Final</drools.version>
-		<!-- LOGS -->
-		<logback.version>1.0.6</logback.version>
-		<slf4j.version>1.6.6</slf4j.version>
 		<jackson-version>1.8.0</jackson-version>
 	</properties>
 
@@ -78,6 +75,12 @@
 				<groupId>fr.hoteia.qalingo</groupId>
 				<artifactId>qalingo-api-core-common</artifactId>
 				<version>${qalingo.engine.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>log4j</artifactId>
+						<groupId>log4j</groupId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>fr.hoteia.qalingo</groupId>
