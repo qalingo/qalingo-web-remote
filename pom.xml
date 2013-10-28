@@ -58,21 +58,21 @@
 		<dependencies>
 			<!-- Qalingo libs -->
 			<dependency>
-				<groupId>fr.hoteia.qalingo</groupId>
+				<groupId>${project.groupId}</groupId>
 				<artifactId>qalingo-common-shared-configuration</artifactId>
 				<version>${qalingo.engine.version}</version>
 				<classifier>resources</classifier>
 				<type>zip</type>
 			</dependency>
 			<dependency>
-				<groupId>fr.hoteia.qalingo</groupId>
+				<groupId>${project.groupId}</groupId>
 				<artifactId>qalingo-frontoffice-shared-configuration</artifactId>
 				<version>${qalingo.engine.version}</version>
 				<classifier>resources</classifier>
 				<type>zip</type>
 			</dependency>
 			<dependency>
-				<groupId>fr.hoteia.qalingo</groupId>
+				<groupId>${project.groupId}</groupId>
 				<artifactId>qalingo-api-core-common</artifactId>
 				<version>${qalingo.engine.version}</version>
 				<exclusions>
@@ -83,17 +83,27 @@
 				</exclusions>
 			</dependency>
 			<dependency>
-				<groupId>fr.hoteia.qalingo</groupId>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>qalingo-api-core-jms</artifactId>
+				<version>${qalingo.engine.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
 				<artifactId>qalingo-api-core-jax-rs</artifactId>
 				<version>${qalingo.engine.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>fr.hoteia.qalingo</groupId>
+				<groupId>${project.groupId}</groupId>
 				<artifactId>qalingo-api-core-jax-ws</artifactId>
 				<version>${qalingo.engine.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>fr.hoteia.qalingo</groupId>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>qalingo-api-core-jms</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
 				<artifactId>qalingo-i18n-properties</artifactId>
 				<version>${qalingo.engine.version}</version>
 				<exclusions>
@@ -104,12 +114,12 @@
 				</exclusions>
 			</dependency>
 			<dependency>
-				<groupId>fr.hoteia.qalingo</groupId>
+				<groupId>${project.groupId}</groupId>
 				<artifactId>qalingo-api-web-remote-rest</artifactId>
 				<version>${qalingo.engine.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>fr.hoteia.qalingo</groupId>
+				<groupId>${project.groupId}</groupId>
 				<artifactId>qalingo-api-web-remote-ws</artifactId>
 				<version>${qalingo.engine.version}</version>
 			</dependency>
@@ -146,7 +156,7 @@
 				<version>1.4</version>
 			</dependency>
 
-			<!-- Springs libs -->
+			<!-- Spring libs -->
 			<!-- Core utilities used by other modules. Define this if you use Spring Utility APIs (org.springframework.core.*/org.springframework.util.*) -->
 			<dependency>
 				<groupId>org.springframework</groupId>
