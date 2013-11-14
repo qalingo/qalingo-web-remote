@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>fr.hoteia.qalingo</groupId>
+	<groupId>org.hoteia.qalingo</groupId>
 	<artifactId>qalingo-b2c-web-remote</artifactId>
 	<version>0.7.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -51,7 +51,7 @@
 	</properties>
 
 	<modules>
-		<module>qalingo-webapp-remotes</module>
+		<module>webapp-remotes</module>
 	</modules>
 
 	<dependencyManagement>

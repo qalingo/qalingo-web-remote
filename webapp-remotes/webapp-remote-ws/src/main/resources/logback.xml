@@ -20,7 +20,7 @@
 		</encoder>
 	</appender>
 	
-    <logger name="fr.hoteia.qalingo" level="WARN">
+    <logger name="org.hoteia.qalingo" level="WARN">
         <appender-ref ref="STDOUT" />
     </logger>
 
