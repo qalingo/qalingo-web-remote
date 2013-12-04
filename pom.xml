@@ -42,7 +42,7 @@
 		<!-- Datas -->
 		<hibernate.version>4.2.6.Final</hibernate.version>
 		<!-- CXF -->
-		<cxf.version>2.7.0</cxf.version>
+		<cxf.version>3.0.0-milestone1</cxf.version>
 		<!-- SOLR -->
 		<solr.version>4.0.0</solr.version>
 		<!-- DROOLS -->
