@@ -210,11 +210,12 @@
 			<artifactId>antlr</artifactId>
 		</dependency>
 
-		<!-- Cache dependencies -->
+		<!-- Cache dependencies
 		<dependency>
 			<groupId>net.sf.ehcache</groupId>
 			<artifactId>ehcache-web</artifactId>
 		</dependency>
+		 -->
 		
 		<!-- UI Velocity framework -->
 		<dependency>
