@@ -37,7 +37,8 @@
 	<import resource="classpath:conf/spring/qalingo-core-local-ds.xml" />
 	<import resource="classpath:conf/spring/qalingo-core-context.xml" />
 	<import resource="classpath:conf/spring/qalingo-core-jax-rs.xml" />
-
+    <import resource="classpath:conf/spring/qalingo-core-remote-common-dozer.xml" />
+    
 	<!-- JMS : CONFIG -->
 	<import resource="classpath:conf/spring/qalingo-core-jms.xml" />
 	<import resource="classpath:conf/spring/qalingo-core-jms-template.xml" />
