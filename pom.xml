@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.hoteia.qalingo</groupId>
 	<artifactId>qalingo-web-remote</artifactId>
-	<version>0.7.1-SNAPSHOT</version>
+	<version>0.8.0</version>
 	<packaging>pom</packaging>
 	<name>qalingo-web-remote</name>
 	<description>{Q} Commerce Solution Project</description>
@@ -19,7 +18,7 @@
 		<connection>scm:git:git@github.com:qalingo/qalingo-web-remote.git</connection>
 		<developerConnection>scm:git:git@github.com:qalingo/qalingo-web-remote.git</developerConnection>
 		<url>scm:git:git@github.com:qalingo/qalingo-web-remote.git</url>
-		<tag>HEAD</tag>
+		<tag>qalingo-web-remote-0.8.0</tag>
 	</scm>
 
 	<properties>
