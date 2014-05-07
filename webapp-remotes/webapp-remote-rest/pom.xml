@@ -214,13 +214,6 @@
 			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
 		</dependency>
 
-		<!-- Cache dependencies
-		<dependency>
-			<groupId>net.sf.ehcache</groupId>
-			<artifactId>ehcache-web</artifactId>
-		</dependency>
-		 -->
-
 		<!-- UI Velocity framework -->
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
