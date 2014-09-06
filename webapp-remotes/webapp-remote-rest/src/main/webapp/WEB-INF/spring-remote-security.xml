@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Most of the code in the Qalingo project is copyrighted Hoteia and licensed
+    under the Apache License Version 2.0 (release version 0.8.0)
+            http://www.apache.org/licenses/LICENSE-2.0
+
+                      Copyright (c) Hoteia, 2012-2014
+    http://www.hoteia.com - http://twitter.com/hoteia - contact@hoteia.com
+
+
+-->
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd
+		">
+ 
+	<!-- Don't scan security.* ! We need to exclude BO userDetailsService -->
+	<context:component-scan base-package="org.hoteia.qalingo.core.security.helper" />
+	<context:component-scan base-package="org.hoteia.qalingo.core.security.util" />
+	<context:component-scan base-package="org.hoteia.qalingo.core.security.service.fo" />
+	
+   <http entry-point-ref="http401UnauthorizedEntryPoint">
+      <intercept-url pattern="/rest/cart/shipping-address/**" access="ROLE_FO_CUSTOMER"/>
+      <intercept-url pattern="/rest/cart/billing-address/**" access="ROLE_FO_CUSTOMER"/>
+
+      <intercept-url pattern="/rest/customer/account/**" access="ROLE_FO_CUSTOMER"/>
+      <intercept-url pattern="/rest/customer/wishlist/**" access="ROLE_FO_CUSTOMER"/>
+      <intercept-url pattern="/rest/customer/order/**" access="ROLE_FO_CUSTOMER"/>
+      <intercept-url pattern="/rest/customer/address/**" access="ROLE_FO_CUSTOMER"/>
+
+      <form-login
+         authentication-success-handler-ref="ajaxSimpleUrlAuthenticationSuccessHandler"
+         authentication-failure-handler-ref="ajaxSimpleUrlAuthenticationFailureHandler"
+      />
+ 
+      <logout />
+   </http>
+ 
+	<beans:bean id="daoAuthenticationProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<beans:property name="userDetailsService" ref="userDetailsService" />
+	</beans:bean>
+
+	<beans:bean id="authenticationManager" class="org.springframework.security.authentication.ProviderManager">
+		<beans:property name="providers">
+			<beans:list>
+				<beans:ref local="daoAuthenticationProvider" />
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+ 
+    <authentication-manager>
+       <authentication-provider user-service-ref="userDetailsService"> 
+			 <password-encoder ref="encoder" />
+        </authentication-provider>
+    </authentication-manager>
+	
+	<beans:bean id="encoder" class="org.springframework.security.crypto.password.StandardPasswordEncoder"></beans:bean>
+
+	<beans:bean id="securityContextPersistenceFilter" class="org.springframework.security.web.context.SecurityContextPersistenceFilter"> 
+		<beans:property name="securityContextRepository"> 
+			<beans:bean class="org.springframework.security.web.context.HttpSessionSecurityContextRepository"> 
+				<beans:property name="allowSessionCreation" value="false" /> 
+			</beans:bean> 
+		</beans:property> 
+	</beans:bean>
+	
+</beans:beans>
