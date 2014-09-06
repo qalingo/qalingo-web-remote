@@ -16,7 +16,7 @@
 	</organization>
 
 	<modules>
-		<module>webapp-remote-rest</module>
+		<module>webapp-remote-rest-frontoffice</module>
 		<module>webapp-remote-ws</module>
 	</modules>
 

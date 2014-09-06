@@ -6,10 +6,10 @@
 		<artifactId>qalingo-webapp-remotes</artifactId>
 		<version>0.8.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>qalingo-webapp-remote-rest</artifactId>
+	<artifactId>qalingo-webapp-remote-rest-frontoffice</artifactId>
 	<packaging>war</packaging>
-	<name>{Q} Commerce Solution Remote Rest webapp</name>
-	<description>{Q} Commerce Solution Remote Rest webapp</description>
+	<name>{Q} Commerce Solution Remote Rest Front webapp</name>
+	<description>{Q} Commerce Solution Remote Rest Front webapp</description>
 	<url>http://www.qalingo.com</url>
 	<organization>
 		<name>Hoteia</name>
@@ -21,11 +21,11 @@
 		<deploy.server.id>tomcatQalingo</deploy.server.id>
 		<deploy.server.ip>localhost</deploy.server.ip>
 		<deploy.webapp.port>22080</deploy.webapp.port>
-		<deploy.webapp.path>/remote-rest</deploy.webapp.path>
+		<deploy.webapp.path>/remote-rest-frontoffice</deploy.webapp.path>
 	</properties>
 
 	<build>
-		<finalName>remote-rest</finalName>
+		<finalName>remote-rest-frontoffice</finalName>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
