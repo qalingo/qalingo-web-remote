@@ -35,6 +35,7 @@
       <intercept-url pattern="/rest/customer/wishlist/**" access="ROLE_FO_CUSTOMER"/>
       <intercept-url pattern="/rest/customer/order/**" access="ROLE_FO_CUSTOMER"/>
       <intercept-url pattern="/rest/customer/address/**" access="ROLE_FO_CUSTOMER"/>
+      <intercept-url pattern="/rest/checkout/process-payment/**" access="ROLE_FO_CUSTOMER"/>
 
       <form-login
          authentication-success-handler-ref="ajaxSimpleUrlAuthenticationSuccessHandler"
