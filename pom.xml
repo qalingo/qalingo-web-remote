@@ -3,7 +3,7 @@
 
 	<groupId>org.hoteia.qalingo</groupId>
 	<artifactId>qalingo-web-remote</artifactId>
-	<version>0.9.0</version>
+	<version>0.9.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>qalingo-web-remote</name>
 	<description>{Q} Commerce Solution Project</description>
@@ -649,7 +649,7 @@
 		<connection>scm:git:git@github.com:qalingo/qalingo-web-remote.git</connection>
 		<developerConnection>scm:git:git@github.com:qalingo/qalingo-web-remote.git</developerConnection>
 		<url>scm:git:git@github.com:qalingo/qalingo-web-remote.git</url>
-		<tag>qalingo-web-remote-0.9.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 	
 	<distributionManagement>
