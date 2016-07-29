@@ -14,13 +14,6 @@
 		<url>http://www.hoteia.com</url>
 	</organization>
 
-	<scm>
-		<connection>scm:git:git@github.com:qalingo/qalingo-web-remote.git</connection>
-		<developerConnection>scm:git:git@github.com:qalingo/qalingo-web-remote.git</developerConnection>
-		<url>scm:git:git@github.com:qalingo/qalingo-web-remote.git</url>
-		<tag>HEAD</tag>
-	</scm>
-
 	<properties>
 		<root.basedir>${project.basedir}</root.basedir>
 		<qalingo.engine.version>0.9.0</qalingo.engine.version>
@@ -89,12 +82,12 @@
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>qalingo-api-core-jax-rs-bo</artifactId>
-				<version>${project.version}</version>
+				<version>${qalingo.engine.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>qalingo-api-core-jax-rs-fo</artifactId>
-				<version>${project.version}</version>
+				<version>${qalingo.engine.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>${project.groupId}</groupId>
@@ -652,6 +645,13 @@
 		</pluginManagement>
 	</build>
 
+	<scm>
+		<connection>scm:git:git@github.com:qalingo/qalingo-web-remote.git</connection>
+		<developerConnection>scm:git:git@github.com:qalingo/qalingo-web-remote.git</developerConnection>
+		<url>scm:git:git@github.com:qalingo/qalingo-web-remote.git</url>
+		<tag>HEAD</tag>
+	</scm>
+	
 	<distributionManagement>
 		<repository>
 			<id>releases</id>
