@@ -3,7 +3,7 @@
 
 	<groupId>org.hoteia.qalingo</groupId>
 	<artifactId>qalingo-web-remote</artifactId>
-	<version>0.9.0-SNAPSHOT</version>
+	<version>0.9.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>qalingo-web-remote</name>
 	<description>{Q} Commerce Solution Project</description>
