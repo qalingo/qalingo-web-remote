@@ -16,30 +16,14 @@
 
 	<properties>
 		<root.basedir>${project.basedir}</root.basedir>
-		<qalingo.engine.version>0.9.1-SNAPSHOT</qalingo.engine.version>
 		<packaging.excludes>WEB-INF/classes/*.properties</packaging.excludes>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<solr.server.url>http://localhost:14080/solr</solr.server.url>
 		<env.name>developpement</env.name>
 		<qalingo.webservice.url>http://localhost:21080/remote-ws</qalingo.webservice.url>
 
-		<!-- Spring -->
-		<spring.version>3.2.4.RELEASE</spring.version>
-		<aspectj.version>1.7.0</aspectj.version>
-		<!-- spring.security -->
-		<spring.security.version>3.1.4.RELEASE</spring.security.version>
-		<!-- Spring-batch -->
-		<spring.batch.version>2.1.9.RELEASE</spring.batch.version>
-		<spring.batch.admin.version>1.2.1.RELEASE</spring.batch.admin.version>
-		<!-- Datas -->
-		<hibernate.version>4.1.8.Final</hibernate.version>
-		<!-- CXF -->
-		<cxf.version>3.0.0-milestone1</cxf.version>
-		<!-- SOLR -->
-		<solr.version>4.0.0</solr.version>
-		<!-- DROOLS -->
-		<drools.version>5.4.0.Final</drools.version>
-		<jackson.version>2.3.1</jackson.version>
+		<qalingo.engine.version>0.9.1-SNAPSHOT</qalingo.engine.version>
+
 	</properties>
 
 	<modules>
@@ -321,19 +305,23 @@
 				</exclusions>
 			</dependency>
 
+			<!-- 
 			<dependency>
 				<groupId>javax.ws.rs</groupId>
 				<artifactId>jsr311-api</artifactId>
 				<version>1.1.1</version>
 			</dependency>
-            <!-- JACKSON Libs : JSON -->
+			-->
+			
+            <!-- JACKSON Libs : JSON 
             <dependency>
                 <groupId>com.fasterxml.jackson.jaxrs</groupId>
                 <artifactId>jackson-jaxrs-json-provider</artifactId>
                 <version>${jackson.version}</version>
-            </dependency>
+            </dependency>-->
 
 			<!-- JaxB libs -->
+			<!-- 
 			<dependency>
 				<groupId>com.sun.xml.bind</groupId>
 				<artifactId>jaxb-impl</artifactId>
@@ -344,6 +332,7 @@
 				<artifactId>jaxb-api</artifactId>
 				<version>2.1</version>
 			</dependency>
+			-->
 
 			<!-- Cache dependencies 
 			<dependency>
